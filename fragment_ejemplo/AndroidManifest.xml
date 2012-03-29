@@ -5,6 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -18,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="DetailsActivity"></activity>
     </application>
 
 </manifest>
