@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="hello">Hello World, ListActivity!</string>
+    <string
+        name="app_name">Honeycomb Fragments</string>
+    <string-array
+        name="image_titles">
+        <item>Baby Bison</item>
+        <item>Grizzly</item>
+        <item>Owl</item>
+    </string-array>
+    <string-array
+        name="image_locations">
+        <item>baby_bison.jpg</item>
+        <item>grizzly.jpg</item>
+        <item>owl.jpg</item>
+    </string-array>
+</resources>

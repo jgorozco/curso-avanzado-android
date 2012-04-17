@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.tid.custom_element.CustomTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/customTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomTextView"
+        app:custom_font="harabara.ttf"
+        android:textSize="35dp"/>
+
+</LinearLayout>

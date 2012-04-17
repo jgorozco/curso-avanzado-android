@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/6/trunk/FragmentDemo/res/layout
+END
+test_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/FragmentDemo/res/layout/test_fragment.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/6/trunk/FragmentDemo/res/layout/main.xml
+END
+dynamic_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3/trunk/FragmentDemo/res/layout/dynamic_fragment.xml
+END

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Step 1:"></TextView>
+	<Button android:text="Download Fragment" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/download_fragment"></Button>
+	<TextView android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="or"></TextView>
+	<Button android:layout_width="fill_parent" android:id="@+id/load_fragment_cache"
+		android:layout_height="wrap_content" android:text="Load Fragment Cache"></Button>
+	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Step 2:"></TextView>
+	<Button android:text="Start Demo" android:layout_height="wrap_content"
+		android:id="@+id/start_demo" android:layout_width="fill_parent"></Button>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="fondo_scr">
+        <item name="android:background">#020D6B</item>
+    </style>
+    <style name="sample_1">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#378c00</item>
+    </style>
+    <style name="sample_2" parent="@style/sample_1">
+        <item name="android:textSize">35sp</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="sample_btn" >
+		<item name="android:padding">14dp</item>
+		<item name="android:alpha">0.6</item>
+    </style>    
+    <style name="text_input" >
+		<item name="android:background">@drawable/demo_shape</item>
+		<item name="android:padding">14dp</item>
+    </style>    
+    
+</resources>

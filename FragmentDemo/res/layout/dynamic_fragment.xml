@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<LinearLayout android:layout_width="fill_parent"
+			android:id="@+id/static_layout" android:layout_height="wrap_content"
+			android:orientation="vertical" android:background="#0F0"></LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:id="@+id/dynamic_layout" android:layout_height="wrap_content"
+			android:orientation="vertical" android:background="#F00"></LinearLayout>
+	</LinearLayout>
+</ScrollView>

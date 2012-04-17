@@ -15,7 +15,7 @@ public class Fragment_ejemplo extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  setContentView(R.layout.main);
+        setContentView(R.layout.main);
         setListAdapter(ArrayAdapter.createFromResource(getApplicationContext(), R.array.list_elements,
         		android.R.layout.simple_list_item_1));
         getListView().setOnItemClickListener(new OnItemClickListener() {

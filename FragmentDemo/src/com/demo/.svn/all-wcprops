@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/6/trunk/FragmentDemo/src/com/demo
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/6/trunk/FragmentDemo/src/com/demo/MainActivity.java
+END
+TestFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/TestFragment.java
+END
+DynamicFragmentActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/DynamicFragmentActivity.java
+END
+AsyncImageLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/AsyncImageLoader.java
+END
+MultiDexClassLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/MultiDexClassLoader.java
+END
+Commons.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/Commons.java
+END
+FileDownloader.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/FragmentDemo/src/com/demo/FileDownloader.java
+END
