@@ -1,0 +1,28 @@
+- Fragments  xx
+- Sensores de Sistema xx
+----brujula, un ejemplo de usarla
+- Animaciones Avanzadas x
+----- crear una animacion por codigo y aplicarla
+- OpenGL: conceptos básicos, uso de OpenGL desde NDK
+----- crear un ejemplo simple de opengl desde ndk
+----- integrar alguna libreria de opengl para el uso en el terminal
+- Elementos customizados x
+-----crear un elemento que extienda de button o te textview redefiniendo el ondraw metiendo animaciones
+- Usando estilos en Android xx
+- Servicios del sistema
+-----SystemServices.bluetooth(escanear bluetooth, conectarse)
+-----SystemServices.wifi (escanear wifis, conectarse...)<-dejamelo a mi ;)
+-----SystemServices.powermanager(gestionar bateria, pantalla...)
+-----alarma
+- Eventos de pantalla
+-----distintos tipos de eventos  http://developer.android.com/guide/topics/ui/ui-events.html
+-----motionevent, que son y como usarlos http://developer.android.com/reference/android/view/MotionEvent.html
+- Testing UI
+-----http://code.google.com/p/robotium/
+-----http://developer.android.com/guide/developing/tools/monkey.html
+- Observers
+-----http://developer.android.com/reference/java/util/Observer.html y http://developer.android.com/reference/android/database/ContentObserver.html, crear un observador de un content provider y ver como funciona.
+- Herramientas para analizar y optimizar las apps
+-----http://www.helloandroid.com/tutorials/how-optimize-your-android-apps-performance y otras movidas asi...
+
+Cualquier otra duda dame un toquecillo :-) mil gracias!
