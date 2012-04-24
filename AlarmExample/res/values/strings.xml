@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AlarmExample</string>
+        
+    <string name="alarma">Alarma:</string>
+    <string name="time">Tiempo... (seg)</string>
+    <string name="launch">Lanzar en:</string>
+    <string name="sec">segundos.</string>
+    
+        
+    <string name="buttonToast">Toast</string>
+    <string name="buttonNotif">Notificación</string>
+    <string name="buttonCall">Llamada</string>
+        
+    <string name="alarma_rep">Alarma con repetición:</string>
+    <string name="launch_rep">Lanzar cada:</string>
+    
+</resources>
