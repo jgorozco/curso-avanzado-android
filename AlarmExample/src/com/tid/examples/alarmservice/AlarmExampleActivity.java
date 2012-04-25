@@ -63,7 +63,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchToast(getTime(mTime));
+				launchToast(getTime());
 			}
 		});
         
@@ -71,7 +71,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchNotif(getTime(mTime));
+				launchNotif(getTime());
 			}
 		});
         
@@ -79,7 +79,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchCall(getTime(mTime));
+				launchCall(getTime());
 			}
 		});
         
@@ -87,7 +87,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchToastRep(getTime(mTimeRep), getRepeating());	//Coge el tiempo de mTimeRep
+				launchToastRep(getRepeating());
 			}
 		});
         
@@ -103,11 +103,10 @@ public class AlarmExampleActivity extends Activity {
     /**
      * Toma el tiempo del EditText y lo pasa a formato de milisegundos UTC
      * 
-     * @param editText
      * @return
      */
-    private long getTime(EditText editText){
-    	String time = editText.getText().toString();
+    private long getTime(){
+    	String time = mTime.getText().toString();
     	
     	long longTime = System.currentTimeMillis() + Integer.valueOf(time)*1000;
     	
@@ -172,7 +171,7 @@ public class AlarmExampleActivity extends Activity {
     	mAlarmManager.set(AlarmManager.RTC, time, pending);
     }
     
-    private void launchToastRep(long time, long repeteating){
+    private void launchToastRep(long repeteating){
     	
     	//Preparar el PendingIntent
     	//Se lanza a la clase ToastReceiver.java
@@ -184,7 +183,7 @@ public class AlarmExampleActivity extends Activity {
 
     	//Ponemos la alarma con repeticion
     	//RTC (Usa System.currentTimeMillis()).
-    	mAlarmManager.setRepeating(AlarmManager.RTC, time, repeteating, mPendingIntent);
+    	mAlarmManager.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), repeteating, mPendingIntent);
     }
     
     private void cancelRep(){
