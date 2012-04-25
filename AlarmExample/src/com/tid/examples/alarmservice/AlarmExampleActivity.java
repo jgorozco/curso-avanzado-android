@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.curso.ejemplos.R;
+import com.tid.examples.alarmservice.R;
 
 /**
  * Example of use of Alarm Service
@@ -20,8 +21,11 @@ import com.curso.ejemplos.R;
  */
 public class AlarmExampleActivity extends Activity {
 	
-	//Instace of AlarmManager
+	//Instancia del AlarmManager
 	private AlarmManager mAlarmManager;
+	
+	//Guardamos como atributo el pending intent para poder cancelarlo
+	private PendingIntent mPendingIntent;
 
 	//Views
 	private EditText mTime;
@@ -31,6 +35,7 @@ public class AlarmExampleActivity extends Activity {
 	private Button mButtonNotif;
 	private Button mButtonCall;
 	private Button mButtonToastRep;
+	private Button mCancel;
 	
 	private static final int PHONE_NUMBER = 123;
 	
@@ -50,6 +55,7 @@ public class AlarmExampleActivity extends Activity {
         mButtonNotif = (Button) findViewById(R.id.buttonNotif);
         mButtonCall = (Button) findViewById(R.id.buttonCall);
         mButtonToastRep = (Button) findViewById(R.id.buttonToastRep);
+        mCancel = (Button) findViewById(R.id.cancelRep);
         
         //Set listeners
         
@@ -57,7 +63,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchToast(getTime());
+				launchToast(getTime(mTime));
 			}
 		});
         
@@ -65,7 +71,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchNotif(getTime());
+				launchNotif(getTime(mTime));
 			}
 		});
         
@@ -73,7 +79,7 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchCall(getTime());
+				launchCall(getTime(mTime));
 			}
 		});
         
@@ -81,25 +87,69 @@ public class AlarmExampleActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				launchToastRep(getTime());
+				launchToastRep(getTime(mTimeRep), getRepeating());	//Coge el tiempo de mTimeRep
+			}
+		});
+        
+        mCancel.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				cancelRep();
 			}
 		});
     }
     
-    private long getTime(){
-    	String time = mTime.getText().toString();
+    /**
+     * Toma el tiempo del EditText y lo pasa a formato de milisegundos UTC
+     * 
+     * @param editText
+     * @return
+     */
+    private long getTime(EditText editText){
+    	String time = editText.getText().toString();
     	
-    	long intTime = System.currentTimeMillis() + Integer.valueOf(time)*1000;
+    	long longTime = System.currentTimeMillis() + Integer.valueOf(time)*1000;
     	
-    	return intTime;
+    	return longTime;
+    }
+    
+    private long getRepeating(){
+    	String time = mTimeRep.getText().toString();
+    	
+    	long longTime = Integer.valueOf(time)*1000;
+    	
+    	return longTime;
     }
     
     private void launchToast(long time){
-    	//TODO
+    	
+    	//Preparar el PendingIntent
+    	//Se lanza a la clase ToastReceiver.java
+    	Intent i = new Intent(this, ToastReceiver.class);
+    	
+    	//Creamos el PendingIntent para BroadcastReceiver (getBroadcast)
+    	//Solo se lanza una vez (FLAG_ONE_SHOT)
+    	mPendingIntent = PendingIntent.getBroadcast(this, 0, i, PendingIntent.FLAG_ONE_SHOT);
+    	
+    	//Ponemos la alarma
+    	//RTC (Usa System.currentTimeMillis()).
+    	mAlarmManager.set(AlarmManager.RTC, time, mPendingIntent);
     }
     
     private void launchNotif(long time){
-    	//TODO
+    	
+    	//Preparar el PendingIntent
+    	//Se lanza a la clase NotifReceiver.java
+    	Intent i = new Intent(this, NotifReceiver.class);
+    	
+    	//Creamos el PendingIntent para BroadcastReceiver (getBroadcast)
+    	//Solo se lanza una vez (FLAG_ONE_SHOT)
+    	mPendingIntent = PendingIntent.getBroadcast(this, 0, i, PendingIntent.FLAG_ONE_SHOT);
+    	
+    	//Ponemos la alarma
+    	//RTC (Usa System.currentTimeMillis()).
+    	mAlarmManager.set(AlarmManager.RTC, time, mPendingIntent);
     }
 
     /**
@@ -109,18 +159,38 @@ public class AlarmExampleActivity extends Activity {
      */
     private void launchCall(long time){
     	
-    	//Prepare the pending intent
-    	//ACTION_DIAL and a phone number
+    	//Preparar el PendingIntent
+    	//En este caso es un intent implicito, con accion ACTION_DIAL y un numero de telefono
     	Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + PHONE_NUMBER));
+    	
+    	//Creamos el PendingIntent para Activity (getActivity)
+    	//Solo se lanza una vez (FLAG_ONE_SHOT)
     	PendingIntent pending = PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_ONE_SHOT);
     	
-    	//Set the alarm
-    	//RTC (Alarm time in System.currentTimeMillis() (wall clock time in UTC)).
+    	//Ponemos la alarma
+    	//RTC (Usa System.currentTimeMillis()).
     	mAlarmManager.set(AlarmManager.RTC, time, pending);
     }
     
-    private void launchToastRep(long time){
-    	//TODO
+    private void launchToastRep(long time, long repeteating){
+    	
+    	//Preparar el PendingIntent
+    	//Se lanza a la clase ToastReceiver.java
+    	Intent i = new Intent(this, ToastReceiver.class);
+    	
+    	//Creamos el PendingIntent para BroadcastReceiver (getBroadcast)
+    	//Se repite (ponemos FLAG_UPDATE_CURRENT)
+    	mPendingIntent = PendingIntent.getBroadcast(this, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+
+    	//Ponemos la alarma con repeticion
+    	//RTC (Usa System.currentTimeMillis()).
+    	mAlarmManager.setRepeating(AlarmManager.RTC, time, repeteating, mPendingIntent);
+    }
+    
+    private void cancelRep(){
+    	//Cancela el PendingIntent (el ultimo)
+    	mAlarmManager.cancel(mPendingIntent);
+    	Toast.makeText(this, "Cancelada", Toast.LENGTH_SHORT).show();
     }
     
     

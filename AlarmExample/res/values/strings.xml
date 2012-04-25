@@ -15,5 +15,6 @@
         
     <string name="alarma_rep">Alarma con repetición:</string>
     <string name="launch_rep">Lanzar cada:</string>
+    <string name="cancel">Cancelar</string>
     
 </resources>
