@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Ejemplo_opengl_java!</string>
+    <string name="app_name">Ejemplo_opengl_java</string>
+
+</resources>
