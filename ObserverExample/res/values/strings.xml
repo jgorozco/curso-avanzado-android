@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ObserverExample</string>
+    
+    <string name="register">Registrar Observer</string>
+    <string name="unregister">Deregistrar Observer</string>
+
+</resources>
