@@ -25,4 +25,47 @@
 - Herramientas para analizar y optimizar las apps
 -----http://www.helloandroid.com/tutorials/how-optimize-your-android-apps-performance y otras movidas asi...
 
-Cualquier otra duda dame un toquecillo :-) mil gracias!
+    BLOQUE 1:
+
+    1. Servicios del sistema: Alarma
+    - Poner alarmas que hagan distintas cosas: sacar toast, lanzas aplicación...
+    - Incluir alarmas periódicas
+
+perfecto, el tema es trabajar con un servicio del sistema y sacarle partido, usando un toast, notificacion o lanzar una app, perfecto 
+
+    2. Servicios del sistema: Bluetooth
+    - Escaneo, conexión y envio de texto
+
+tb me parece genial, si puedes meter el codigo para, por ejemplo, sincronizar con un dispositivo como un manos libres o algo así, ya lo bordas.(o cualquier cacharro bluetooth, solo para demo) 
+
+    3. Animaciones avanzadas (en código)
+    - Ejemplo similar al existente, pero en código, con EditText para entrada de parámetros
+
+el royo es crear un elemento customo como el que hay pero con más cosillas. Si es un EditText podría ser también un editText con validaciones, que cuando termines de escribir si no valida que vibre y se ponga en rojo. 
+
+    4. Observers: ContentObserver (Registro de llamadas, archivos, contactos...)
+    - Idea: observar el media provider para, por ejemplo, sincronizar fotos con album remoto mediante web service (fake, claro, se pone un toast de "subiendo al server")
+
+puta madre, ejemplo perfecto 
+
+
+    BLOQUE 2
+    X. Elemento customizado con animaciones (onDraw)
+
+ jugar un poco con el bucle on draw, al final como pasas de un modelo lineal a un modelo en plan "bucle de juego" para explicar esa movida.
+
+    X. Eventos de pantalla - clarificar
+
+En realidad los eventos de pantalla van más alla. Se puede detectar cuando tocas y cuando levantas. el multitouch tb.... También cuando arrastras. Y hay algunos ayudadores que son los motionEvent. Probar esas cosillas 
+
+    X. Motion Event
+
+ 
+
+    X. Brújula
+    X. PowerManager
+
+    BLOQUE 3
+    X. OpenGL  xx
+    X. Herramientas testing xxxx
+    X. Herramientas análisis 
