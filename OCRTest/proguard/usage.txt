@@ -1,0 +1,374 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.googlecode.leptonica.android.AdaptiveMap
+com.googlecode.leptonica.android.Binarize
+com.googlecode.leptonica.android.Box
+com.googlecode.leptonica.android.Constants
+com.googlecode.leptonica.android.Convert
+com.googlecode.leptonica.android.Enhance
+com.googlecode.leptonica.android.JpegIO
+com.googlecode.leptonica.android.Pix:
+    public static final int INDEX_W
+    public static final int INDEX_H
+    public static final int INDEX_D
+    57:67:public Pix(int,int,int)
+    86:94:public byte[] getData()
+    104:110:public int[] getDimensions()
+    121:121:public boolean getDimensions(int[])
+    148:154:public com.googlecode.leptonica.android.Pix copy()
+    163:163:public boolean invert()
+    195:201:public static com.googlecode.leptonica.android.Pix createFromPix(byte[],int,int,int)
+    210:213:public android.graphics.Rect getRect()
+    222:222:public int getWidth()
+    231:231:public int getHeight()
+    240:240:public int getDepth()
+    253:259:public int getPixel(int,int)
+    272:279:public void setPixel(int,int,int)
+    private static native int nativeCreatePix(int,int,int)
+    private static native int nativeCreateFromData(byte[],int,int,int)
+    private static native boolean nativeGetData(int,byte[])
+    private static native int nativeGetDataSize(int)
+    private static native int nativeCopy(int)
+    private static native boolean nativeInvert(int)
+    private static native boolean nativeGetDimensions(int,int[])
+    private static native int nativeGetWidth(int)
+    private static native int nativeGetHeight(int)
+    private static native int nativeGetDepth(int)
+    private static native int nativeGetPixel(int,int,int)
+    private static native void nativeSetPixel(int,int,int,int)
+com.googlecode.leptonica.android.Pixa:
+    55:55:public static com.googlecode.leptonica.android.Pixa createPixa(int)
+    71:77:public static com.googlecode.leptonica.android.Pixa createPixa(int,int,int)
+    100:100:public int getNativePixa()
+    110:116:public com.googlecode.leptonica.android.Pixa copy()
+    130:136:public com.googlecode.leptonica.android.Pixa sort(int,int)
+    178:178:public boolean join(com.googlecode.leptonica.android.Pixa)
+    189:190:public void addPix(com.googlecode.leptonica.android.Pix,int)
+    200:201:public void addBox(com.googlecode.leptonica.android.Box,int)
+    212:213:public void add(com.googlecode.leptonica.android.Pix,com.googlecode.leptonica.android.Box,int)
+    222:228:public com.googlecode.leptonica.android.Box getBox(int)
+    255:255:public int getWidth()
+    266:266:public int getHeight()
+    276:276:public android.graphics.Rect getRect()
+    286:299:public android.graphics.Rect getBoxRect(int)
+    310:316:public int[] getBoxGeometry(int)
+    364:365:public void replacePix(int,com.googlecode.leptonica.android.Pix,com.googlecode.leptonica.android.Box)
+    376:377:public void mergeAndReplacePix(int,int)
+    387:387:public boolean writeToFileRandomCmap(java.io.File)
+    private static native int nativeCreate(int)
+    private static native int nativeCopy(int)
+    private static native int nativeSort(int,int,int)
+    private static native boolean nativeJoin(int,int)
+    private static native void nativeAddPix(int,int,int)
+    private static native void nativeAddBox(int,int,int)
+    private static native void nativeAdd(int,int,int,int)
+    private static native boolean nativeWriteToFileRandomCmap(int,java.lang.String,int,int)
+    private static native void nativeReplacePix(int,int,int,int)
+    private static native void nativeMergeAndReplacePix(int,int,int)
+    private static native int nativeGetBox(int,int)
+com.googlecode.leptonica.android.ReadFile:
+    29:29:public ReadFile()
+    42:54:public static com.googlecode.leptonica.android.Pix readMem(byte[])
+    66:80:public static com.googlecode.leptonica.android.Pix readBytes8(byte[],int,int)
+    94:109:public static boolean replaceBytes8(com.googlecode.leptonica.android.Pix,byte[],int,int)
+    121:129:public static com.googlecode.leptonica.android.Pixa readFiles(java.io.File,java.lang.String)
+    140:155:public static com.googlecode.leptonica.android.Pix readFile(java.io.File)
+    private static native int nativeReadMem(byte[],int)
+    private static native int nativeReadBytes8(byte[],int,int)
+    private static native boolean nativeReplaceBytes8(int,byte[],int,int)
+    private static native int nativeReadFiles(java.lang.String,java.lang.String)
+    private static native int nativeReadFile(java.lang.String)
+com.googlecode.leptonica.android.Rotate
+com.googlecode.leptonica.android.Scale
+com.googlecode.leptonica.android.Scale$ScaleType
+com.googlecode.leptonica.android.Skew
+com.googlecode.leptonica.android.WriteFile
+com.googlecode.tesseract.android.R
+com.googlecode.tesseract.android.R$array
+com.googlecode.tesseract.android.R$attr
+com.googlecode.tesseract.android.R$color
+com.googlecode.tesseract.android.R$drawable
+com.googlecode.tesseract.android.R$id
+com.googlecode.tesseract.android.R$layout
+com.googlecode.tesseract.android.R$raw
+com.googlecode.tesseract.android.R$string
+com.googlecode.tesseract.android.R$styleable
+com.googlecode.tesseract.android.R$xml
+com.googlecode.tesseract.android.TessBaseAPI:
+    public static final int PSM_OSD_ONLY
+    public static final int PSM_AUTO_OSD
+    public static final int PSM_AUTO_ONLY
+    public static final int PSM_AUTO
+    public static final int PSM_SINGLE_COLUMN
+    public static final int PSM_SINGLE_BLOCK_VERT_TEXT
+    public static final int PSM_SINGLE_BLOCK
+    public static final int PSM_SINGLE_LINE
+    public static final int PSM_SINGLE_WORD
+    public static final int PSM_SINGLE_CHAR
+    public static final java.lang.String VAR_CHAR_WHITELIST
+    public static final java.lang.String VAR_CHAR_BLACKLIST
+    public static final int OEM_TESSERACT_ONLY
+    public static final int OEM_CUBE_ONLY
+    public static final int OEM_TESSERACT_CUBE_COMBINED
+    public static final int OEM_DEFAULT
+    171:181:public boolean init(java.lang.String,java.lang.String)
+    220:220:public java.lang.String getInitLanguagesAsString()
+    279:280:public void setDebug(boolean)
+    290:291:public void setRectangle(android.graphics.Rect)
+    304:305:public void setRectangle(int,int,int,int)
+    313:320:public void setImage(java.io.File)
+    330:337:public void setImage(android.graphics.Bitmap)
+    364:365:public void setImage(byte[],int,int,int,int)
+    private native void nativeFinalize()
+    private native boolean nativeInit(java.lang.String,java.lang.String)
+    private native java.lang.String nativeGetInitLanguagesAsString()
+    private native void nativeSetImageBytes(byte[],int,int,int,int)
+    private native void nativeSetRectangle(int,int,int,int)
+    private native void nativeSetDebug(boolean)
+com.moob.ocrdnitest.BeepManager:
+    private static final float BEEP_VOLUME
+com.moob.ocrdnitest.BuildConfig
+com.moob.ocrdnitest.CaptureActivity:
+    public static final java.lang.String DEFAULT_SOURCE_LANGUAGE_CODE
+    public static final java.lang.String DEFAULT_TARGET_LANGUAGE_CODE
+    public static final java.lang.String DEFAULT_TRANSLATOR
+    public static final java.lang.String DEFAULT_OCR_ENGINE_MODE
+    public static final java.lang.String DEFAULT_PAGE_SEGMENTATION_MODE
+    public static final boolean DEFAULT_TOGGLE_AUTO_FOCUS
+    public static final boolean DEFAULT_TOGGLE_BEEP
+    public static final boolean DEFAULT_TOGGLE_CONTINUOUS
+    public static final boolean DEFAULT_TOGGLE_REVERSED_IMAGE
+    public static final boolean DEFAULT_TOGGLE_TRANSLATION
+    public static final boolean DEFAULT_TOGGLE_LIGHT
+    private static final boolean CONTINUOUS_DISPLAY_RECOGNIZED_TEXT
+    private static final boolean CONTINUOUS_DISPLAY_METADATA
+    private static final boolean DISPLAY_SHUTTER_BUTTON
+    static final java.lang.String DOWNLOAD_BASE
+    static final java.lang.String OSD_FILENAME
+    static final java.lang.String OSD_FILENAME_BASE
+    static final int MINIMUM_MEAN_CONFIDENCE
+    private static final int SETTINGS_ID
+    private static final int ABOUT_ID
+    private static final int OPTIONS_COPY_RECOGNIZED_TEXT_ID
+    private static final int OPTIONS_COPY_TRANSLATED_TEXT_ID
+    private static final int OPTIONS_SHARE_RECOGNIZED_TEXT_ID
+    private static final int OPTIONS_SHARE_TRANSLATED_TEXT_ID
+    870:881:private varargs java.lang.CharSequence setSpanBetweenTokens(java.lang.CharSequence,java.lang.String,android.text.style.CharacterStyle[])
+    995:995:static boolean getFirstLaunch()
+com.moob.ocrdnitest.CaptureActivityHandler:
+    219:220:void shutterButtonClick()
+com.moob.ocrdnitest.LuminanceSource:
+    public abstract byte[] getRow(int,byte[])
+    public abstract byte[] getMatrix()
+    80:80:public boolean isCropSupported()
+    94:94:public com.moob.ocrdnitest.LuminanceSource crop(int,int,int,int)
+    101:101:public boolean isRotateSupported()
+    110:110:public com.moob.ocrdnitest.LuminanceSource rotateCounterClockwise()
+com.moob.ocrdnitest.OcrCharacterHelper:
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ARABIC
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_BULGARIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CATALAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CHINESE_SIMPLIFIED
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CHINESE_TRADITIONAL
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CZECH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_DANISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_DUTCH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ENGLISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_FINNISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_FRENCH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_GERMAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_GREEK
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HEBREW
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HINDI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HUNGARIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_INDONESIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ITALIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_JAPANESE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_KOREAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_LATVIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_LITHUANIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_NORWEGIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_POLISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_PORTUGUESE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ROMANIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_RUSSIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SERBIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SLOVAK
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SLOVENIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SPANISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SWEDISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TAGALOG
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_THAI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TURKISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_UKRAINIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_VIETNAMESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ARABIC
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_BULGARIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CATALAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CHINESE_SIMPLIFIED
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CHINESE_TRADITIONAL
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CZECH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_DANISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_DUTCH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ENGLISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_FINNISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_FRENCH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_GERMAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_GREEK
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HEBREW
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HINDI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HUNGARIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_INDONESIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ITALIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_JAPANESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_KOREAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_LATVIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_LITHUANIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_NORWEGIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_POLISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_PORTUGUESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ROMANIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_RUSSIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SERBIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SLOVAK
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SLOVENIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SPANISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SWEDISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TAGALOG
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_THAI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TURKISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_UKRAINIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_VIETNAMESE
+    100:100:private OcrCharacterHelper()
+    191:229:public static java.lang.String getBlacklist(android.content.SharedPreferences,java.lang.String)
+    234:272:public static java.lang.String getWhitelist(android.content.SharedPreferences,java.lang.String)
+    277:317:public static void setBlacklist(android.content.SharedPreferences,java.lang.String,java.lang.String)
+    320:360:public static void setWhitelist(android.content.SharedPreferences,java.lang.String,java.lang.String)
+com.moob.ocrdnitest.OcrResult:
+    48:71:public OcrResult(android.graphics.Bitmap,java.lang.String,int[],int,java.util.List,java.util.List,java.util.List,java.util.List,java.util.List,long)
+    149:149:public long getTimestamp()
+com.moob.ocrdnitest.OcrResultFailure:
+    31:31:public long getTimeRequired()
+    35:35:public long getTimestamp()
+com.moob.ocrdnitest.OcrResultText:
+    59:59:public java.lang.String getText()
+    67:67:public int[] getWordConfidences()
+    71:71:public int getMeanConfidence()
+    75:75:public java.util.List getRegionBoundingBoxes()
+    83:83:public java.util.List getStripBoundingBoxes()
+    91:91:public java.util.List getCharacterBoundingBoxes()
+com.moob.ocrdnitest.PlanarYUVLuminanceSource:
+    65:74:public byte[] getRow(int,byte[])
+    79:105:public byte[] getMatrix()
+    110:110:public boolean isCropSupported()
+    115:115:public com.moob.ocrdnitest.LuminanceSource crop(int,int,int,int)
+com.moob.ocrdnitest.PreferencesActivity
+com.moob.ocrdnitest.R
+com.moob.ocrdnitest.R$array
+com.moob.ocrdnitest.R$attr
+com.moob.ocrdnitest.R$color
+com.moob.ocrdnitest.R$drawable
+com.moob.ocrdnitest.R$id
+com.moob.ocrdnitest.R$layout
+com.moob.ocrdnitest.R$raw
+com.moob.ocrdnitest.R$string
+com.moob.ocrdnitest.R$styleable
+com.moob.ocrdnitest.R$xml
+com.moob.ocrdnitest.ViewfinderView:
+    static final boolean DRAW_REGION_BOXES
+    static final boolean DRAW_TEXTLINE_BOXES
+    static final boolean DRAW_STRIP_BOXES
+    static final boolean DRAW_WORD_BOXES
+    static final boolean DRAW_TRANSPARENT_WORD_BACKGROUNDS
+    static final boolean DRAW_CHARACTER_BOXES
+    static final boolean DRAW_WORD_TEXT
+    static final boolean DRAW_CHARACTER_TEXT
+    private java.lang.String[] words
+    private java.util.List regionBoundingBoxes
+    private java.util.List stripBoundingBoxes
+    private java.util.List characterBoundingBoxes
+edu.sfsu.cs.orange.ocr.camera.AutoFocusManager:
+    private static final long AUTO_FOCUS_INTERVAL_MS
+edu.sfsu.cs.orange.ocr.camera.CameraConfigurationManager:
+    private static final java.lang.String TAG
+    private static final int MIN_PREVIEW_PIXELS
+    private static final int MAX_PREVIEW_PIXELS
+    125:135:void setTorch(android.hardware.Camera,boolean)
+edu.sfsu.cs.orange.ocr.camera.CameraManager:
+    private static final int MIN_FRAME_WIDTH
+    private static final int MIN_FRAME_HEIGHT
+    private static final int MAX_FRAME_WIDTH
+    private static final int MAX_FRAME_HEIGHT
+edu.sfsu.cs.orange.ocr.language.LanguageCodeHelper:
+    public static final java.lang.String TAG
+    34:35:private LanguageCodeHelper()
+    48:123:public static java.lang.String mapLanguageCode(java.lang.String)
+org.json.simple.ItemList
+org.json.simple.JSONArray
+org.json.simple.JSONAware
+org.json.simple.JSONObject
+org.json.simple.JSONStreamAware
+org.json.simple.JSONValue
+org.json.simple.parser.ContainerFactory
+org.json.simple.parser.ContentHandler
+org.json.simple.parser.JSONParser
+org.json.simple.parser.ParseException
+org.json.simple.parser.Yylex
+org.json.simple.parser.Yytoken
+org.xeustechnologies.jtar.Octal:
+    24:24:public Octal()
+    78:99:public static int getOctalBytes(long,byte[],int,int)
+    115:118:public static int getCheckSumOctalBytes(long,byte[],int,int)
+    135:138:public static int getLongOctalBytes(long,byte[],int,int)
+org.xeustechnologies.jtar.TarConstants
+org.xeustechnologies.jtar.TarEntry:
+    37:40:public TarEntry(java.io.File,java.lang.String)
+    48:48:public boolean equals(org.xeustechnologies.jtar.TarEntry)
+    52:52:public boolean isDescendent(org.xeustechnologies.jtar.TarEntry)
+    56:56:public org.xeustechnologies.jtar.TarHeader getHeader()
+    64:65:public void setName(java.lang.String)
+    68:68:public int getUserId()
+    72:73:public void setUserId(int)
+    76:76:public int getGroupId()
+    80:81:public void setGroupId(int)
+    84:84:public java.lang.String getUserName()
+    88:89:public void setUserName(java.lang.String)
+    92:92:public java.lang.String getGroupName()
+    96:97:public void setGroupName(java.lang.String)
+    100:102:public void setIds(int,int)
+    105:106:public void setModTime(long)
+    109:110:public void setModTime(java.util.Date)
+    113:113:public java.util.Date getModTime()
+    117:117:public java.io.File getFile()
+    125:126:public void setSize(long)
+    154:180:public void extractTarHeader(java.lang.String)
+    189:195:public long computeCheckSum(byte[])
+    204:235:public void writeEntryHeader(byte[])
+org.xeustechnologies.jtar.TarHeader:
+    public static final int NAMELEN
+    public static final int MODELEN
+    public static final int UIDLEN
+    public static final int GIDLEN
+    public static final int SIZELEN
+    public static final int MODTIMELEN
+    public static final int CHKSUMLEN
+    public static final byte LF_OLDNORM
+    public static final byte LF_NORMAL
+    public static final byte LF_LINK
+    public static final byte LF_SYMLINK
+    public static final byte LF_CHR
+    public static final byte LF_BLK
+    public static final byte LF_DIR
+    public static final byte LF_FIFO
+    public static final byte LF_CONTIG
+    public static final int MAGICLEN
+    public static final java.lang.String TMAGIC
+    public static final java.lang.String GNU_TMAGIC
+    public static final int UNAMELEN
+    public static final int GNAMELEN
+    public static final int DEVLEN
+    186:194:public static int getNameBytes(java.lang.StringBuffer,byte[],int,int)
+org.xeustechnologies.jtar.TarInputStream:
+    private static final int SKIP_BUFFER_SIZE
+org.xeustechnologies.jtar.TarOutputStream
+org.xeustechnologies.jtar.TarUtils
