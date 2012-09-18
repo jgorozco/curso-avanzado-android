@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="wrap_content"
+	android:layout_height="match_parent">
+	<Button android:layout_width="wrap_content" android:text="Button"
+		android:layout_alignParentLeft="true" android:layout_height="wrap_content"
+		android:id="@+id/boton1"></Button>
+	<ImageButton android:src="@drawable/icon"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@+id/boton1" android:layout_alignLeft="@+id/boton1"
+		android:id="@+id/image_button"></ImageButton>
+	<SeekBar android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/image_button"
+		android:layout_alignLeft="@+id/image_button" android:layout_margin="10px"
+		android:id="@+id/seek_bar"></SeekBar>
+	<DatePicker android:layout_below="@+id/seek_bar"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/seek_bar" android:id="@+id/date_picker"></DatePicker>
+	<TimePicker android:layout_below="@+id/date_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/date_picker" android:id="@+id/time_picker"></TimePicker>
+	<CheckBox android:text="CheckBox" android:layout_toRightOf="@+id/image_button"
+		android:layout_height="wrap_content" android:layout_alignTop="@+id/image_button"
+		android:layout_alignBottom="@+id/image_button" android:id="@+id/check1"
+		android:layout_width="fill_parent"></CheckBox>
+	<EditText android:layout_toRightOf="@+id/boton1"
+		android:layout_height="wrap_content" android:layout_alignTop="@+id/boton1"
+		android:layout_alignBottom="@+id/boton1" android:id="@+id/edittext1"
+		android:layout_width="fill_parent">
+		<requestFocus></requestFocus>
+	</EditText>
+</RelativeLayout>

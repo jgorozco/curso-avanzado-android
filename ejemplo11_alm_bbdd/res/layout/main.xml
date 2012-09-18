@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content" android:id="@+id/button1"
+		android:layout_height="wrap_content" android:onClick="addElement"
+		android:text="add item"></Button>
+	<EditText android:layout_below="@+id/button1"
+		android:layout_height="wrap_content" android:layout_alignLeft="@+id/button1"
+		android:id="@+id/name" android:layout_width="match_parent">
+		<requestFocus></requestFocus>
+	</EditText>
+	<EditText android:layout_below="@+id/name"
+		android:layout_height="wrap_content" android:layout_alignLeft="@+id/name"
+		android:layout_width="match_parent" android:id="@+id/phone"></EditText>
+	<EditText android:layout_below="@+id/phone"
+		android:layout_height="wrap_content" android:layout_alignLeft="@+id/phone"
+		android:id="@+id/addr" android:layout_width="fill_parent"></EditText>
+	<TextView android:layout_below="@+id/addr" android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/addr" android:id="@+id/alltext"></TextView>
+	<Button android:layout_toRightOf="@+id/button1"
+		android:layout_width="wrap_content" android:id="@+id/button2"
+		android:layout_height="wrap_content" android:layout_alignTop="@+id/button1"
+		android:layout_alignBottom="@+id/button1" android:text="delete item"
+		android:onClick="deleteElement"></Button>
+	<Button android:layout_toRightOf="@+id/button2"
+		android:layout_width="wrap_content" android:id="@+id/button3"
+		android:layout_height="wrap_content" android:layout_alignTop="@+id/button2"
+		android:layout_alignBottom="@+id/button2" android:onClick="refreshElements"
+		android:text="get elements"></Button>
+
+</RelativeLayout>

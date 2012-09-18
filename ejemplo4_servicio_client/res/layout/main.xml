@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button android:id="@+id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="iniciar servicio" android:onClick="InitService"></Button>
+    <Button android:id="@+id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="parar servicio" android:onClick="StopService"></Button>
+    <Button android:id="@+id/button3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="enviar ping" android:onClick="PingService"></Button>
+    <TextView android:text="TextView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/text_log"></TextView>
+</LinearLayout>

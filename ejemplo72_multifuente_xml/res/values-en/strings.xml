@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">hello worlod in english
+	</string>
+	<string name="app_name">Ejemplo7 multifuente_xml</string>
+	<string name="datos">hello world in english data</string>
+</resources>

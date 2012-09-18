@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ejemplo61_customContentProv!</string>
+    <string name="app_name">ejemplo61 customContentProv</string>
+    <string name="rperm_label">lectura de content provider</string>
+    <string name="wperm_label">escritura en el content provider</string>
+</resources>

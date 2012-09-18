@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="300dp"
+	android:layout_height="60dp" android:background="#AACCCC" android:id="@+id/rel_la">
+	<ImageView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_week"
+		android:id="@+id/imageView1" android:layout_alignParentLeft="true"></ImageView>
+	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content" android:text="TextView"
+		android:layout_height="wrap_content" android:layout_toRightOf="@+id/imageView1"
+		android:layout_alignTop="@+id/imageView1" android:layout_alignBottom="@+id/imageView1"
+		android:id="@+id/texto_toast"></TextView>
+
+</RelativeLayout>
